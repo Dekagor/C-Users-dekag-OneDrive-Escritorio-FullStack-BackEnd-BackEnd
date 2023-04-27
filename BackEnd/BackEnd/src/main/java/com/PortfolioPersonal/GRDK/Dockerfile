@@ -5,8 +5,10 @@
 #FROM alpine:latest
 #CMD ["/bin/sh"]
 
-FROM amazoncorretto:17-alpine-jdk
+FROM amazoncorretto:11-alpine-jdk
 
-copy target/GRDK-0.0.1-SNAPSHOT.jar app.jar
+MAINTAINER GRDK
 
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+copy target/GRDK-0.0.1-SNAPSHOT.jar GRDK-app.jar
+
+ENTRYPOINT ["java", "-jar", "/GRDK-app.jar"]
