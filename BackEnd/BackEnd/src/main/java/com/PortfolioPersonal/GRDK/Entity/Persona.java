@@ -30,4 +30,12 @@ public class Persona {
     
     @Size(min = 1, max = 50, message = "No cumple requerimiento")
     private String img;  
+    
+    
+    public Persona(String nombre, String apellido, String descripcion, String puesto, String img, String banner){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
+    }
+    
 }
